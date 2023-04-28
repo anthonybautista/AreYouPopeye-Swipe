@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AreYouPopeye_Swipe"
+             x:Class="AreYouPopeye_Swipe.MainPage">
+
+    <StackLayout>
+        <Grid RowSpacing="0" ColumnSpacing="0" Margin="0" Padding="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.05*"/>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Rectangle BackgroundColor="Blue" Grid.Row="0" Grid.ColumnSpan="2"/>
+            <Label 
+                Text="Are You Popeye?" 
+                TextColor="White" 
+                x:Name="AppTitle" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="Large" 
+                Grid.Row="0" 
+                Grid.ColumnSpan="2"/>
+            <local:SwipeContainer Swipe="OnSwiped" 
+            HorizontalOptions="Center" 
+            VerticalOptions="CenterAndExpand"
+            Grid.Row="1" 
+            Grid.ColumnSpan="2" >
+                <Image 
+                    Grid.Row="1" 
+                    Grid.ColumnSpan="2" 
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="5"
+                    x:Name="QuestionImage" 
+                    Source="olive1.png"/>
+            </local:SwipeContainer>
+            <Label 
+                Text="" 
+                x:Name="QuestionText" 
+                HorizontalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                TextColor="Black"
+                FontSize="24" 
+                Grid.Row="2" 
+                Grid.ColumnSpan="2"/>
+            <Label 
+                Text="Swipe the image above right for True, or left for False!" 
+                x:Name="HelperText" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Large" 
+                TextColor="Black"
+                Grid.Row="3" 
+                Grid.ColumnSpan="2"/>
+            <Image 
+                Grid.Row="4" 
+                Grid.ColumnSpan="2" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                x:Name="Olive" 
+                Source="olive1.png"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
